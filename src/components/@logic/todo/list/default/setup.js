@@ -19,6 +19,32 @@ export default {
     const setLoading = (state) => {
       loading.value = state
     }
+    const header = ref({
+      title: {
+        label: 'Заголовок',
+        type: 'title',
+        sort: true,
+        width: '30%'
+      },
+      description: {
+        label: 'Описание',
+        type: 'description',
+        sort: true,
+        width: '40%'
+      },
+      group: {
+        label: 'Статус',
+        type: 'group',
+        sort: true,
+        width: '20%'
+      },
+      actions: {
+        label: '',
+        type: 'actions',
+        sort: false,
+        width: '10%'
+      },
+    })
     const list = computed(() => {
       return store.state.list.filter((el) => !el.isDeleted)
     })
@@ -50,7 +76,8 @@ export default {
       loading,
       list,
       addTask,
-      openRemoved
+      openRemoved,
+      header
     }
   }
 };

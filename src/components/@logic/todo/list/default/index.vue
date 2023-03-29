@@ -7,10 +7,7 @@
     <Loader
       v-if="loading"
     />
-    <div class="">
-
-    </div>
-    <div :class="$style.wrap">
+    <div v-else :class="$style.wrap">
       <TodoItem v-for="(item) in list" :key="item.id" :class="$style.todoItem" :data="item"/>
     </div>
   </div>

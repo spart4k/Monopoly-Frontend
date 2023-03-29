@@ -36,7 +36,7 @@ export default {
     }
     onMounted(() => {
       getList()
-      store.commit('setPageName', 'Список задач')
+      //store.commit('setPageName', 'Список задач')
     })
     return {
       loading,

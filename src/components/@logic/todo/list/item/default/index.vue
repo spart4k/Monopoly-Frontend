@@ -7,9 +7,11 @@
       {{ $props.data.description }}
     </div>
     <Group :class="$style.group" @changeGroup="changeGroup" :group="$props.data.group"/>
-    <svg @click.stop="removeTask" :class="[$style.action, isDeleted && $style.isDeleted]" viewBox="0 0 14 16" width="50">
-      <use :xlink:href="!isDeleted ? require(`@/assets/icons/remove.svg`) + '#removed' : require(`@/assets/icons/return.svg`) + '#return'"/>
-    </svg>
+    <div :class="[$style.action]">
+      <svg @click.stop="removeTask" :class="[isDeleted && $style.isDeleted]" viewBox="0 0 14 16" width="50">
+        <use :xlink:href="!isDeleted ? require(`@/assets/icons/remove.svg`) + '#removed' : require(`@/assets/icons/return.svg`) + '#return'"/>
+      </svg>
+    </div>
   </div>
 </template>
 <script src="./setup.js"></script>

@@ -10,7 +10,7 @@
   //@include themeBorder;
   .title {
     width: 30%;
-    margin-right: rem(5);
+    //margin-right: rem(5);
     text-align: left;
   }
   .description {
@@ -22,14 +22,17 @@
     text-align: left;
   }
   .action {
-    color: $red;
-    width: rem(25);
-    height: rem(25);
-    margin: 0 rem(15);
+    width: 10%;
+    //margin: 0 rem(15);
     user-select: none;
-  }
-  .isDeleted {
-    color: green;
+    svg {
+      width: rem(25);
+      height: rem(25);
+      color: $red;
+      &.isDeleted {
+        color: green;
+      }
+    }
   }
   &:hover {
     cursor: pointer;
