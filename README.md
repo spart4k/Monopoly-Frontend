@@ -1,3 +1,9 @@
+- Тихонравов Алексей
+- Тестовое задание Vue
+- Todo лист с возможность менять цвет темы
+- npm i && npm run serve
+
+
 # frontend
 
 ## Project setup
