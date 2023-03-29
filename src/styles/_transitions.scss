@@ -1,0 +1,327 @@
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bounce-fast-enter-active {
+  animation: bounce-in .2s;
+}
+.bounce-fast-leave-active {
+  animation: bounce-in .2s reverse;
+}
+
+.bounce-center-enter-active {
+  animation: bounce-in-center .5s;
+}
+.bounce-center-leave-active {
+  animation: bounce-in-center .5s reverse;
+}
+@keyframes bounce-in-center {
+  0% {
+    transform: translate(-50%, -50%)scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%)scale(1.2);
+  }
+  100% {
+    transform: translate(-50%, -50%)scale(1);
+  }
+}
+
+.reveal-enter-active {
+  animation: reveal .4s ease;
+}
+.reveal-leave-active {
+  animation: reveal .4s ease reverse;
+}
+@keyframes reveal {
+  0% {
+    transform: translate3d(0, 20rem, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+
+.mobile-slide-enter-active {
+  animation: mobile-slide .3s ease;
+}
+
+@keyframes mobile-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.fade-arrow-enter-active, .fade-arrow-leave-active {
+  transition: .2s;
+}
+
+.fade-arrow-enter {
+  width: rem(0) !important;
+  margin-right: rem(0) !important;
+}
+
+.fade-arrow-enter-to {
+  width: rem(8);
+  margin-right: rem(10);
+}
+
+.fade-arrow-leave {
+  width: rem(8);
+  margin-right: rem(10);
+}
+
+.fade-arrow-leave-to {
+  width: rem(0) !important;
+  margin-right: rem(0) !important;
+}
+
+.fade-arrow-fast-active {
+  transition: opacity .5s ease;
+}
+
+
+.fade-route-enter-active, .fade-route-leave-active {
+  position: absolute;
+  transition: .5s;
+}
+
+.fade-route-enter {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.fade-route-enter-to {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.fade-route-leave {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.fade-route-leave-to {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+//
+
+.fade-route-back-enter-active, .fade-route-back-leave-active {
+  position: absolute;
+  transition: .5s;
+}
+
+.fade-route-back-enter {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.fade-route-back-enter-to {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.fade-route-back-leave {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.fade-route-back-leave-to {
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+
+//
+
+.router-view,
+.router-view-back {
+  &-enter-active,
+  &-leave-active {
+    position: absolute;
+    width: 100%;
+    //height: 100%;
+    //top: 0;
+    //left: 0;
+    z-index: 15;
+  }
+}
+
+$duration: .2s;
+
+.router-view-leave-active {
+  transition: transform $duration ease-in-out;
+  z-index: 15;
+  transform: translateX(0%);
+}
+.router-view-leave-to {
+  z-index: 15;
+  transform: translateX(-100%);
+}
+.router-view-enter-active {
+  transition: transform $duration ease-in-out;
+  z-index: 15;
+  transform: translateX(100%);
+}
+.router-view-enter-to {
+  z-index: 15;
+  transform: translateX(0%);
+}
+
+.router-view-back-leave-active {
+  transition: transform $duration ease-in-out;
+  z-index: 15;
+  transform: translateX(0%);
+}
+.router-view-back-leave-to {
+  z-index: 15;
+  transform: translateX(100%);
+}
+.router-view-back-enter-active {
+  transition: transform $duration ease-in-out;
+  z-index: 15;
+  transform: translateX(-100%);
+}
+.router-view-back-enter-to {
+  z-index: 15;
+  transform: translateX(0%);
+}
+
+
+//
+
+.fade-route-fast-active {
+  transition: opacity .5s ease;
+}
+
+
+.fade-enter-active {
+  transition: opacity .5s ease 1s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}
+
+.fade-fast-active {
+  transition: opacity .5s ease;
+}
+
+
+.fade-fast-enter, .fade-fast-leave-to{
+  opacity: 0;
+}
+
+.slide-down-fade-enter-active {
+  animation: slide-down .9s ease;
+  //transition: all .3s ease;
+}
+@keyframes slide-down {
+  0% {
+    transform: translateX(-50%) translateY(100%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+.slide-up-enter-active {
+  animation: slide-up .5s ease;
+}
+.slide-up-leave-active {
+  animation: slide-up .5s ease reverse;
+}
+
+
+.slide-up-slow-enter-active {
+  animation: slide-up 1.5s ease;
+}
+.slide-up-slow-leave-active {
+  animation: slide-up 1.5s ease reverse;
+}
+
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.slide-down-enter-active {
+  animation: slide-up 0.5s ease;
+}
+.slide-down-leave-active {
+  animation: slide-down 0.5s ease reverse;
+}
+
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-3rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.dropdown-enter,
+.dropdown-leave-to {
+  max-height: rem(1);
+  opacity: 0;
+}
+
+.dropdown-enter-to,
+.dropdown-leave {
+  opacity: 1;
+  max-height: rem(300);
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: all 0.15s ease-out;
+  transform-origin: top center;
+}
+
+.list-complete-item {
+  transition: all 5s;
+  display: inline-block;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}

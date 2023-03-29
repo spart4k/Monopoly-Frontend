@@ -1,0 +1,78 @@
+.task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  //background-color: aqua;
+  padding: rem(10) rem(0);
+  transition: transform 0.15s;
+  //@include themeBorder;
+  .title {
+    width: 30%;
+    margin-right: rem(5);
+    text-align: left;
+  }
+  .description {
+    width: 40%;
+    text-align: left;
+  }
+  .group {
+    width: 20%;
+    text-align: left;
+  }
+  .action {
+    color: $red;
+    width: rem(25);
+    height: rem(25);
+    margin: 0 rem(15);
+    user-select: none;
+  }
+  .isDeleted {
+    color: green;
+  }
+  &:hover {
+    cursor: pointer;
+    //transform: scale(1.01);
+  }
+  //&:after {
+  //  content: '';
+  //  position: absolute;
+  //  bottom: 0;
+  //  left: 0;
+  //  width: 100%;
+  //  background-color: $mainColor;
+  //  height: rem(0.5);
+  //  transform-origin: center left;
+  //  transition: .3s;
+  //}
+  //&:hover {
+  //  &:after {
+  //    transform: scaleX(0);
+  //  }
+  //}
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: rem(0.5);
+    right: 0;
+    bottom: -.4rem;
+    background-color: $mainColor;
+    transition: transform .3s, transform-origin 0s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  &:hover {
+    cursor: pointer;
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: rem(10);
+    //border-bottom: rem(1) solid;
+  }
+}

@@ -1,0 +1,61 @@
+@use 'sass:math';
+
+@function rem($value, $delimeter: 16) {
+  @return math.div($value, $delimeter) * 1rem
+};
+
+@mixin defaultFontSize {
+  font-size: rem(18);
+  line-height: 1.1666666667;
+}
+
+@mixin container {
+  width: 100%;
+  padding: 0 rem(30);
+}
+
+@mixin containerMobile {
+  width: 100%;
+  padding: 0 rem(15);
+}
+
+@mixin themeColor {
+  transition: color, background-color .3s;
+  color: $mainColor;
+}
+
+@mixin themeSubColor {
+  transition: color .3s;
+  color: $mainSubColor;
+}
+
+@mixin themeBackground {
+  transition: background-color .3s;
+  background-color: $mainBackground;
+}
+
+@mixin themeSubBackground {
+  transition: background-color .3s;
+  background-color: $mainSubBackground;
+}
+
+@mixin themeBorder {
+  transition: border-color .3s;
+  border-color: $mainColor;
+}
+
+$tabletWidth: 900px;
+$mobileWidth: 450px;
+
+$mainColor: var(--mainColor);
+$mainSubColor: var(--mainSubColor);
+$mainBackground: var(--mainBackground);
+$mainSubBackground: var(--mainSubBackground);
+$red: rgb(197, 26, 26);
+
+:root {
+ --mainColor: rgb(35, 30, 30);
+ --mainBackground: #fff;
+ --mainSubColor: #fff;
+ --mainSubBackground: rgb(35, 30, 30);
+}

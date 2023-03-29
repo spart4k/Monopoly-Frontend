@@ -1,0 +1,38 @@
+.list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .panel {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .btn {
+    display: block;
+    margin-bottom: rem(10);
+    &.removed {
+      color: $red;
+      border-color: $red;
+      @include themeBackground;
+    }
+    &:not(:first-child) {
+      margin-left: rem(10);
+    }
+  }
+  .wrap {
+    width: 100%;
+    flex: 1;
+    //height: 100%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+    //max-height: -webkit-fill-available;
+    //@include themeBackground;
+  }
+  .wrapTransition {
+    //transform: translateY(-100%);
+  }
+  .todoItem {
+    transform: translateY(-100%);
+  }
+}

@@ -1,0 +1,61 @@
+.group {
+  .wrap {
+    position: relative;
+    width: rem(120);
+    .label {
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      @include themeBorder;
+      border: rem(1) solid;
+      outline: none;
+      padding: rem(5);
+      border-radius: rem(5);
+      font-size: rem(14);
+      transition: .15s;
+      &.isOpen {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-color: transparent;
+      }
+      svg {
+        width: rem(14);
+        height: rem(10);
+        transition: .15s;
+        //transform-origin: top center;
+        &.isOpen {
+          transform: rotateX(180deg);
+        }
+      }
+    }
+    .options {
+      //margin-top: rem(5);
+      border: rem(1) solid rgba(0,0,0,.3);
+      border-top-color: transparent !important;
+      border-radius: rem(5);
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      position: absolute;
+      //background-color: #fff;
+      z-index: 2;
+      width: 100%;
+      text-align: left;
+      font-size: rem(14);
+      @include themeBackground;
+      @include themeColor;
+      @include themeBorder;
+      p {
+        //padding: rem(2.5) rem(5);
+        padding: rem(5);
+        &:not(:last-child) {
+          border-bottom: rem(1) solid rgba(0,0,0,.3);
+          @include themeBorder;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
