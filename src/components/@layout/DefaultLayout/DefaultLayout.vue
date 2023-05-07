@@ -15,10 +15,10 @@ export default {
 
     const updateFactors = () => {
       const { clientWidth } = document.body
-      scaleFactorX.value = 16 * clientWidth / 1280
+      scaleFactorX.value = 16 * clientWidth / 1440
       if (clientWidth <= 450) scaleFactorX.value = 16
-      if (clientWidth >= 1600) {
-        scaleFactorX.value = 16 * 1600 / 1280
+      if (clientWidth >= 1500) {
+        scaleFactorX.value = 16 * 1500 / 1440
       }
       document.documentElement.style.fontSize = `${scaleFactorX.value}px`
     }

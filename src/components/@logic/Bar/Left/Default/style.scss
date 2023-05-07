@@ -1,0 +1,9 @@
+.barleft {
+  position: fixed;
+  top: $marginInterface;
+  left: $marginInterface;
+  width: $barWidth;
+  height: calc(100% - ($marginInterface * 4));
+  background-color: #fff;
+  border-radius: $borderRadiusInterface;
+}

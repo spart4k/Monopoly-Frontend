@@ -1,0 +1,101 @@
+$cardSize: 14%;
+$cardStreerHeight: rem(20);
+
+.street {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  .price {
+    text-transform: uppercase;
+    font-size: rem(8);
+  }
+  .header {
+    display: flex;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    margin-right: rem(5);
+    font-size: rem(8);
+    padding: rem(10) 0;
+    p {
+      text-transform: uppercase;
+    }
+  }
+  .color {
+    height: 100%;
+    width: $cardStreerHeight;
+    background-color: red;
+  }
+  &.left {
+    .price {
+      margin-left: rem(5);
+    }
+    .title {
+      writing-mode: vertical-rl;
+    }
+    .price {
+      writing-mode: vertical-rl;
+    }
+  }
+  &.top {
+    flex-direction: column;
+    .header {
+      flex-direction: column;
+      .color {
+        width: 100%;
+        height: $cardStreerHeight;;
+      }
+    }
+    .title {
+      writing-mode: unset;
+      transform: rotate(180deg);
+      margin: 0 0 rem(5) 0;
+    }
+    .price {
+      writing-mode: unset;
+      transform: rotate(180deg);
+      margin: rem(5) 0 0 0;
+    }
+  }
+  &.right {
+    flex-direction: row-reverse;
+    .header {
+      flex-direction: row-reverse;
+      .color {
+        height: 100%;
+        width: $cardStreerHeight;
+      }
+    }
+    .title {
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
+      margin-left: rem(5);
+      margin-right: unset;
+    }
+    .price {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      margin: 0 rem(5) 0 0;
+    }
+  }
+  &.bottom {
+    flex-direction: column-reverse;
+    .header {
+      flex-direction: column-reverse;
+      .color {
+        width: 100%;
+        height: $cardStreerHeight;;
+      }
+    }
+    .title {
+      writing-mode: horizontal-tb;
+      margin: rem(5) 0 0 0;
+    }
+    .price {
+      writing-mode: horizontal-tb;
+      margin: 0 0 rem(5) 0;
+    }
+  }
+}

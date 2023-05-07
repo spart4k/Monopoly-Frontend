@@ -1,0 +1,74 @@
+.wrap {
+  padding: rem(7);
+  .title {
+    text-transform: uppercase;
+    height: rem(43);
+    width: 100%;
+    border: rem(1) solid #000;
+    background-color: red;
+    //@include col;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-family: 'FuturaMediumC';
+      font-size: rem(24);
+    }
+  }
+  .ownRight {
+    height: rem(21);
+    @include col;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    font-size: rem(9);
+  }
+  .rent {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(6);
+  }
+  .houseCount {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: rem(1);
+    }
+    &:last-child {
+      margin-bottom: rem(4);
+    }
+  }
+  .hotel {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(10);
+  }
+  .hint {
+    border-block: rem(1.5) solid #000;
+    padding-block: rem(5);
+    margin-bottom: rem(10);
+    p {
+      font-size: rem(8);
+    }
+  }
+  .houseCost {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(1);
+  }
+  .hotelCost {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(4);
+  }
+  .pledge {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,11 @@
+.card {
+  width: rem(163);
+  height: 100%;
+  background-color: $mainBackground;;
+  border-radius: rem(5);
+  padding: rem(5) rem(5);
+  .wrap {
+    height: 100%;
+    border: rem(1) solid #000;;
+  }
+}

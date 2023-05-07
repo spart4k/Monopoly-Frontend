@@ -44,18 +44,27 @@
   border-color: $mainColor;
 }
 
+@mixin col {
+  display: flex;
+  flex-direction: column;
+}
+
 $tabletWidth: 900px;
 $mobileWidth: 450px;
+$mapSize: rem(800);
 
 $mainColor: var(--mainColor);
 $mainSubColor: var(--mainSubColor);
 $mainBackground: var(--mainBackground);
 $mainSubBackground: var(--mainSubBackground);
+$barWidth: rem(264);
+$marginInterface: rem(15);
+$borderRadiusInterface: rem(10);
 $red: rgb(197, 26, 26);
 
 :root {
- --mainColor: rgb(35, 30, 30);
+ --mainColor: #272626;
  --mainBackground: #fff;
  --mainSubColor: #fff;
- --mainSubBackground: rgb(35, 30, 30);
+ --mainSubBackground: #272626;
 }

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import own from './own/index'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
@@ -47,10 +47,10 @@ const store = new Vuex.Store({
       switch (theme) {
         case 'dark':
           mainColor = '#fff';
-          mainBackground = 'rgb(35, 30, 30)';
+          mainBackground = '#272626';
           break;
         case 'light':
-          mainColor = 'rgb(35, 30, 30)';
+          mainColor = '#272626';
           mainBackground = '#fff';
           break;
       }
@@ -279,7 +279,7 @@ const store = new Vuex.Store({
     }
   },
   modules: {
-
+    own
   },
 })
 

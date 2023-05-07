@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Start from '@/views/Start'
 import TodoView from '@/views/Todo'
+import GameView from '@/views/Game'
 
 import TodoList from '@/components/@logic/todo/list/default'
 import TodoListRemoved from '@/components/@logic/todo/list/removed'
@@ -26,6 +27,14 @@ const routes = [
       { path: '/list/removed', component: TodoListRemoved },
       { path: '/list/:id', component: TodoTask },
       { path: '/list/:id/edit', component: TodoAddOrEdit },
+      // ...other sub routes
+    ],
+  },
+  {
+    name: 'Список задач',
+    path: '/game',
+    component: GameView,
+    children: [
       // ...other sub routes
     ],
   },

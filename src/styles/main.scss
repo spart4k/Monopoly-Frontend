@@ -1,6 +1,7 @@
 @import './_normalize.scss';
 @import './_variables.scss';
 @import './_transitions.scss';
+@import './_fonts.scss';
 
 * {
   box-sizing: border-box;
@@ -29,6 +30,7 @@ body {
   height: 100%;
   width: 100%;
   @include themeColor;
+  background-color: $mainColor;
   &:global(.popup-opened) {
     overflow: hidden;
   }

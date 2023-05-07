@@ -148,9 +148,6 @@ export default {
   width: 100%;
   height: 100%;
   font-size: rem(16);
-  display: block;
-  //margin: rem(60) auto;
-  padding: rem(50) rem(150)
 }
 @import './styles/main.scss';
 </style>
