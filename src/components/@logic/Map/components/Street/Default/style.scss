@@ -1,5 +1,6 @@
 $cardSize: 14%;
 $cardStreerHeight: rem(20);
+$borderWidth: rem(1.1);
 
 .street {
   display: flex;
@@ -38,6 +39,9 @@ $cardStreerHeight: rem(20);
     .price {
       writing-mode: vertical-rl;
     }
+    .color {
+      border-left: $borderWidth #000 solid;
+    }
   }
   &.top {
     flex-direction: column;
@@ -46,6 +50,7 @@ $cardStreerHeight: rem(20);
       .color {
         width: 100%;
         height: $cardStreerHeight;;
+        border-top: $borderWidth #000 solid;
       }
     }
     .title {
@@ -66,6 +71,7 @@ $cardStreerHeight: rem(20);
       .color {
         height: 100%;
         width: $cardStreerHeight;
+        border-right: $borderWidth #000 solid;
       }
     }
     .title {
@@ -87,6 +93,7 @@ $cardStreerHeight: rem(20);
       .color {
         width: 100%;
         height: $cardStreerHeight;;
+        border-bottom: $borderWidth #000 solid;
       }
     }
     .title {

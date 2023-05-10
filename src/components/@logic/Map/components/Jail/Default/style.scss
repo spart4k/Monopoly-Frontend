@@ -1,3 +1,24 @@
 .jail {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: 100%;
+  font-size: rem(8);
+  .wrap {
+    width: 75%;
+    height: 75%;
+    transform: rotate(225deg);
+    text-align: center;
+    img {
+      max-width: 75%;
+    }
+    p {
+      font-size: rem(6);
+      span {
+        font-weight: 700;
+        font-size: rem(10);
+      }
+    }
+  }
 }

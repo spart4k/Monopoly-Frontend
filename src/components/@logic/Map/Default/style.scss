@@ -1,6 +1,6 @@
 $mapSize: rem(800);
 $cardSize: rem(107);
-$cardHeight: rem(66);
+$cardHeight: rem(65);
 $cardSubSize: 20%;
 $borderWidth: rem(1.1);
 $cardStreerWidth: 100%;
@@ -38,7 +38,7 @@ $cardStreerHeight: rem(20);
       .cell {
         //box-sizing: content-box;
         //padding: calc($borderWidth/2);
-        border: $borderWidth #000 solid;
+        //border: $borderWidth #000 solid;
         background-color: #CDE6D0;
         text-transform: uppercase;
         font-weight: 500;
@@ -63,9 +63,11 @@ $cardStreerHeight: rem(20);
       }
       .left {
         .cell {
-          border-left: 0;
+          //border-left: 0;
           padding-left: 0;
+          border-right: $borderWidth #000 solid;
           &:not(:first-child), &:not(:last-child) {
+            border-bottom: $borderWidth #000 solid;
             .title {
               height: 100%;
               display: flex;
@@ -84,7 +86,7 @@ $cardStreerHeight: rem(20);
           }
           &:first-child {
             border-top: 0;
-            padding-top: 0;
+            //padding-top: 0;
           }
           &:last-child {
             border-bottom: 0;
@@ -96,9 +98,13 @@ $cardStreerHeight: rem(20);
         .cell {
           border-right: 0;
           padding-right: 0;
+          border-left: $borderWidth #000 solid;
+          &:not(:first-child), &:not(:last-child) {
+            border-bottom: $borderWidth #000 solid;
+          }
           &:first-child {
             border-top: 0;
-            padding-top: 0;
+            //padding-top: 0;
           }
           &:last-child {
             border-bottom: 0;
@@ -122,11 +128,31 @@ $cardStreerHeight: rem(20);
         .top {
           .cell {
             border-top: 0;
+            border-bottom: $borderWidth #000 solid;
+            &:not(:first-child), &:not(:last-child) {
+              border-right: $borderWidth #000 solid;
+            }
+            &:first-child {
+            }
+            &:last-child {
+              border-right: 0;
+              //padding-bottom: 0;
+            }
           }
         }
         .bottom {
           .cell {
             border-bottom: 0;
+            border-top: $borderWidth #000 solid;
+            &:not(:first-child), &:not(:last-child) {
+              border-right: $borderWidth #000 solid;
+            }
+            &:first-child {
+            }
+            &:last-child {
+              border-right: 0;
+              //padding-bottom: 0;
+            }
           }
         }
       }

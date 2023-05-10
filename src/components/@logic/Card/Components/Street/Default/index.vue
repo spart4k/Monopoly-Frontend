@@ -1,9 +1,12 @@
 <template>
   <Card>
     <div :class="$style.wrap">
-      <div :class="$style.title">
+      <div :style="{
+        backgroundColor: $props.card.title.background,
+        color: $props.card.title.color
+      }" :class="$style.title">
         <p>
-          Арбат
+          {{ $props.card.title.text }}
         </p>
       </div>
       <p :class="$style.ownRight">ПРАВО СОБСТВЕННОСТИ</p>

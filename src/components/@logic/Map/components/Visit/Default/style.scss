@@ -1,3 +1,56 @@
 .visit {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  .row {
+    display: flex;
+    font-size: rem(10);
+    font-weight: 700;
+    &:first-child {
+      height: 80%;
+      .image {
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        background-color: #EB8B2C;
+        border-bottom: solid #000 rem(1);
+        border-left: solid #000 rem(1);
+        .wrap {
+          width: 60%;
+          height: 100%;
+          transform: rotate(45deg);
+          p {
+            writing-mode: horizontal-tb;
+          }
+        }
 
+      }
+      p {
+        writing-mode: vertical-lr;
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+      }
+    }
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: auto;
+      p {
+        text-align: center;
+        width: 100%;
+        display: block;
+        //margin-right: rem(5);
+      }
+      width: 80%;
+      height: 20%;
+    }
+  }
 }

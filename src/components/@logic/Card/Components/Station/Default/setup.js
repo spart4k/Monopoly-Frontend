@@ -8,6 +8,10 @@ export default {
     Card
   },
   props: {
+    card: {
+      type: Object,
+      default: () => {}
+    }
   },
   setup () {
     return {

@@ -1,7 +1,8 @@
 <template>
   <div :class="[$style.own, isShow && $style.isShow]">
     <div :class="$style.list">
-      <CardStreet :class="$style.card" v-for="(item, index) in 8" :key="index"/>
+      <component :is="item.type" :class="$style.card" :card="item" v-for="(item, index) in own" :key="index"/>
+      <!--<Street :class="$style.card" :card="item" v-for="(item, index) in own" :key="index"/>-->
     </div>
     <div @click="changeShowing" :class="$style.btn">
       Имущество

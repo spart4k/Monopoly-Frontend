@@ -66,8 +66,9 @@ export default {
         price: 200
       },
       {
-        title: 'Электричество',
+        title: 'Электростанция',
         type: 'service',
+        name: 'lighting',
         price: 200
       },
       {
@@ -125,8 +126,8 @@ export default {
       },
       {
         title: 'Сверх налог',
-        type: 'service',
-        price: 200
+        type: 'taxi',
+        price: 100
       },
       {
         title: 'Ул. Арбат',
@@ -180,8 +181,9 @@ export default {
         price: 200
       },
       {
-        title: 'card',
+        title: 'Водопровод',
         type: 'service',
+        name: 'water',
         price: 200
       },
       {
@@ -221,7 +223,8 @@ export default {
       },
       {
         title: 'Подоходный налог',
-        type: 'taxi'
+        type: 'taxi',
+        price: 200
       },
       {
         title: 'Нагатинская',
@@ -230,8 +233,8 @@ export default {
         price: 200
       },
       {
-        title: 'card',
-        type: 'service',
+        title: 'Общественная казна',
+        type: 'Chest',
         price: 200
       },
       {

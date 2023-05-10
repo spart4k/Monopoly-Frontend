@@ -1,13 +1,21 @@
-import {} from 'vue'
+import { computed } from 'vue'
 
 export default {
-  name: 'Template-Component',
+  name: 'Chance',
   components: {
   },
   props: {
+    cell: {
+      type: Object,
+      default: () => {}
+    }
   },
-  setup () {
+  setup (props) {
+    const imagePath = computed(() => {
+      return require(`@/assets/images/map/road/chance/chance-${props.cell.position}.png`)
+    })
     return {
+      imagePath
     }
   }
 };

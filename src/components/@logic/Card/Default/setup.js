@@ -6,6 +6,10 @@ export default {
   components: {
   },
   props: {
+    card: {
+      type: Object,
+      default: () => {}
+    }
   },
   setup () {
     return {

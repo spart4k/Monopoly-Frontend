@@ -1,6 +1,7 @@
 <template>
-  <div :class="$style.class">
-    Street
+  <div :class="[$style.taxi, $style[$props.cell.position]]">
+    <p :class="$style.title">{{ $props.cell.title }}</p>
+    <p :class="$style.price">Заплатите<br>{{ $props.cell.price }} Р</p>
   </div>
 </template>
 <script src="./setup.js"></script>

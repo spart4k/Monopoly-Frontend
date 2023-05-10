@@ -9,9 +9,10 @@
   border-radius: $borderRadiusInterface;
   transition: height .3s;
   display: flex;
-  overflow: hidden;
+  //overflow: hidden;
   z-index: 10;
   padding-top: rem(20);
+  overflow: auto;
   &:hover {
     height: calc(rem(264) + rem(20));
     cursor: pointer;
@@ -22,6 +23,7 @@
   .list {
     display: flex;
     .card {
+      //height: rem(264);
       height: rem(264);
       &:not(:last-child) {
         margin-right: rem(6);
