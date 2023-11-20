@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import own from './own'
+import user from './user'
 import cards from './cards'
 Vue.use(Vuex)
 
@@ -281,7 +282,8 @@ const store = new Vuex.Store({
   },
   modules: {
     own,
-    cards
+    cards,
+    user
   },
 })
 

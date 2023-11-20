@@ -1,17 +1,33 @@
 .wrap {
   padding: rem(7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .image {
+    margin: rem(15) auto rem(15) auto;
+    width: 90%;
+  }
+  //.title {
+  //  text-transform: uppercase;
+  //  height: rem(43);
+  //  width: 100%;
+  //  border: rem(1) solid #000;
+  //  background-color: red;
+  //  //@include col;
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //  p {
+  //    font-family: 'FuturaMediumC';
+  //    font-size: rem(18);
+  //  }
+  //}
   .title {
-    height: rem(43);
-    width: 100%;
-    border: rem(1) solid #000;
-    background-color: red;
-    //@include col;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    p {
-      @include cardStreetSize;
-    }
+    font-size: rem(12);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
   }
   .ownRight {
     height: rem(21);

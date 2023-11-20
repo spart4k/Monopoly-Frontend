@@ -1,0 +1,18 @@
+.playerInfo {
+  background-color: #fff;
+  width: $barWidth;
+  border-radius: $borderRadiusInterface;
+  height: calc($playerInfoHeight - $marginInterface);
+  display: flex;
+  align-items: center;
+  padding: $paddingInBar;
+  font-weight: 500;
+  .nickname {
+
+  }
+  .balance {
+    color: rgb(31, 178, 90);
+    font-weight: 700;
+    margin-left: rem(10);
+  }
+}

@@ -1,0 +1,18 @@
+.column {
+  position: relative;
+  width: $ownCardWidth;
+  //height: 100%;
+  margin-right: rem(5);
+  .card {
+    position: absolute;
+    transition: transform .2s;
+    height: $ownCardHeight;
+    z-index: 20;
+    &:hover {
+      transform: translateY(-70%);
+      & ~ {
+        transform: translateY(-80%);
+      }
+    }
+  }
+}

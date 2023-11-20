@@ -1,6 +1,7 @@
 <template>
   <div :class="$style.game">
     <div :class="$style.wrap">
+      <PlayerInfo :class="$style.playerInfo"/>
       <BarLeft/>
       <Map/>
       <BarRight/>

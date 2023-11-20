@@ -49,9 +49,28 @@
   flex-direction: column;
 }
 
+@mixin cardTitleSize {
+  font-size: $cardTitleSize;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin cardStreetSize {
+  font-family: 'FuturaMediumC';
+  text-transform: uppercase;
+  font-size: $cardStreetTitleSize;
+}
+
 $tabletWidth: 900px;
 $mobileWidth: 450px;
 $mapSize: rem(800);
+$cardTitleSize: rem(12);
+$cardStreetTitleSize: rem(16);
+$ownCardWidth: rem(163);
+$ownCardHeight: rem(264);
+
+$playerInfoHeight: rem(50);
+
 
 $mainColor: var(--mainColor);
 $mainSubColor: var(--mainSubColor);
@@ -59,6 +78,7 @@ $mainBackground: var(--mainBackground);
 $mainSubBackground: var(--mainSubBackground);
 $barWidth: rem(264);
 $marginInterface: rem(15);
+$paddingInBar: rem(5);
 $borderRadiusInterface: rem(10);
 $red: rgb(197, 26, 26);
 

@@ -15,5 +15,11 @@
     //height: 100%;
     overflow: auto;
     padding-bottom: rem(30);
+    .playerInfo {
+      position: fixed;
+      top: $marginInterface;
+      left: $marginInterface;
+      //z-index: 1;
+    }
   }
 }

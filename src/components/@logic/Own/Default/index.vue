@@ -1,12 +1,13 @@
 <template>
-  <div :class="[$style.own, isShow && $style.isShow]">
+  <div :class="[$style.own, true && $style.isShow]">
     <div :class="$style.list">
-      <component :is="item.type" :class="$style.card" :card="item" v-for="(item, index) in own" :key="index"/>
-      <!--<Street :class="$style.card" :card="item" v-for="(item, index) in own" :key="index"/>-->
+      <OwnColumn :column="item" v-for="(item, index) in ownColsStreets" :key="index" />
+      <OwnColumn :column="item" v-for="(item, index) in ownColsStation" :key="index" />
+      <OwnColumn :column="item" v-for="(item, index) in ownColsServices" :key="index" />
     </div>
-    <div @click="changeShowing" :class="$style.btn">
+    <!--<div @click="changeShowing" :class="$style.btn">
       Имущество
-    </div>
+    </div>-->
   </div>
 </template>
 <script src="./setup.js"></script>
